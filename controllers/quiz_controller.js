@@ -19,6 +19,7 @@ exports.load = function(req, res, next, quizId) {
         next(new Error('No existe quizId=' + quizId)); 
       }
   }).catch(function(error){next(error)});
+
 };
 
 // GET /quizes
@@ -37,9 +38,11 @@ exports.show=function(req, res){
 
 //GET /quizer/:id/answer
 exports.answer=function(req, res){
+
      var resultado ='Incorrecto';
         if(req.query.respuesta === req.quiz.respuesta){
            resultado='Correcto';
         }
          res.render('quizes/answer',{quiz: req.quiz, respuesta: resultado});
 };
+

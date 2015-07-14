@@ -48,3 +48,4 @@ sequelize.sync().then(function() {
 		};
     });
 });
+
