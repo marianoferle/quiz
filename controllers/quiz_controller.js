@@ -1,6 +1,7 @@
-var models = require('../models/models.js');
 
+//GET /quizer/question
 
+<<<<<<< HEAD
 // // GET /quizes/question
 // exports.question= function(req, res ){
 //   //res.render('quizes/question', {pregunta: 'Capital de Italia'});
@@ -20,24 +21,17 @@ exports.load = function(req, res, next, quizId) {
       }
   }).catch(function(error){next(error)});
 
+=======
+exports.question=function(req, res){
+    res.render('quizes/question',{pregunta: 'Capital de Italia'});
+>>>>>>> parent of 72610ef... Despliegue DB en Heroku
 };
 
-// GET /quizes
-exports.index = function(req, res) {  
-  models.Quiz.findAll().then(function(quizes) {
-      res.render('quizes/index.ejs', {quizes: quizes});
-    }); 
-};
 
-//GET /quizer/question
-exports.show=function(req, res){
-    models.Quiz.find(req.params.quizId).then(function(quiz){
-       res.render('quizes/show',{quiz: req.quiz});
-    });
-};
+//GET /quizer/answer
 
-//GET /quizer/:id/answer
 exports.answer=function(req, res){
+<<<<<<< HEAD
 
      var resultado ='Incorrecto';
         if(req.query.respuesta === req.quiz.respuesta){
@@ -46,3 +40,11 @@ exports.answer=function(req, res){
          res.render('quizes/answer',{quiz: req.quiz, respuesta: resultado});
 };
 
+=======
+  if(req.query.respuesta === 'Roma'){
+      res.render('quizes/answer',{respuesta: 'Correcto'});
+  }else{
+      res.render('quizes/answer',{respuesta: 'Incorrecto'});
+  }
+};
+>>>>>>> parent of 72610ef... Despliegue DB en Heroku
