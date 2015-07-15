@@ -24,13 +24,17 @@ exports.load = function(req, res, next, quizId) {
 =======
 exports.question=function(req, res){
     res.render('quizes/question',{pregunta: 'Capital de Italia'});
+<<<<<<< HEAD
 >>>>>>> parent of 72610ef... Despliegue DB en Heroku
+=======
+>>>>>>> parent of 1d9c72d... Despliegue DB en Heroku
 };
 
 
 //GET /quizer/answer
 
 exports.answer=function(req, res){
+<<<<<<< HEAD
 <<<<<<< HEAD
 
      var resultado ='Incorrecto';
@@ -41,10 +45,16 @@ exports.answer=function(req, res){
 };
 
 =======
+=======
+>>>>>>> parent of 1d9c72d... Despliegue DB en Heroku
   if(req.query.respuesta === 'Roma'){
       res.render('quizes/answer',{respuesta: 'Correcto'});
   }else{
       res.render('quizes/answer',{respuesta: 'Incorrecto'});
   }
+<<<<<<< HEAD
 };
 >>>>>>> parent of 72610ef... Despliegue DB en Heroku
+=======
+};
+>>>>>>> parent of 1d9c72d... Despliegue DB en Heroku
